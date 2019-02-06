@@ -30,3 +30,15 @@
 "--------tagbar
 "F8
 
+
+sudo apt-get install cscope
+설치 후에 아래 쉘을 만들어서 /usr/bin에 넣어두고 쓴다.
+#!/bin/sh
+rm -rf cscope.files cscope.files
+find . \( -name '*.c' -o -name '*.cpp' -o -name '*.cc' -o -name '*.h' -o -name '*.s' -o -name '*.S' \) -print > cscope.files
+cscope -i cscope.files
+
+실행
+./mkcscope.sh	
+
+
